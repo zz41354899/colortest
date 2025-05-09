@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# OKLCH + APCA Color Contrast Tool
+
+A modern web application built with Next.js, TypeScript, and Tailwind CSS that helps designers and developers create accessible color combinations using the OKLCH color model and APCA contrast metrics.
+
+## Features
+
+- Interactive color inputs for both foreground and background colors
+- Support for multiple color formats: HEX, RGB, and OKLCH
+- Real-time OKLCH sliders for fine-tuning colors
+- Live preview of UI components with the selected colors
+- APCA contrast calculation and readability evaluation
+- Export color tokens as JSON for design systems
+
+## Technologies Used
+
+- Next.js 14 with App Router
+- TypeScript
+- Tailwind CSS
+- `culori` for color format conversions
+- `apca-w3` for APCA contrast calculations
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository
+2. Install dependencies:
+   ```
+   npm install
+   ```
+3. Run the development server:
+   ```
+   npm run dev
+   ```
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Why OKLCH and APCA?
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### OKLCH Color Model
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+OKLCH (Oklab Lightness-Chroma-Hue) is a perceptually uniform color space that better represents how humans perceive color compared to traditional RGB or HSL. It provides:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- More intuitive color adjustments
+- Better perceptual uniformity
+- Improved color harmony
 
-## Learn More
+### APCA Contrast Algorithm
 
-To learn more about Next.js, take a look at the following resources:
+APCA (Accessible Perceptual Contrast Algorithm) is a modern approach to measuring contrast that better predicts readability compared to WCAG 2.0 contrast ratios. It considers:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- The spatial frequency of text
+- The actual perception of contrast based on relative luminance
+- Polarity effects (dark-on-light vs. light-on-dark)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT

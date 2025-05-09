@@ -40,7 +40,7 @@ OKLCH (Oklab Lightness-Chroma-Hue) is a perceptually uniform color space that be
 - More intuitive color adjustments
 - Better perceptual uniformity
 - Improved color harmony
-- 
+
 ## License
 
 MIT

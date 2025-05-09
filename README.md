@@ -1,6 +1,6 @@
 # OKLCH + WACG Color Contrast Tool
 
-A modern web application built with Next.js, TypeScript, and Tailwind CSS that helps designers and developers create accessible color combinations using the OKLCH color model and APCA contrast metrics.
+A modern web application built with Next.js, TypeScript, and Tailwind CSS that helps designers and developers create accessible color combinations using the OKLCH color model and WCAG contrast metrics.
 
 ## Features
 

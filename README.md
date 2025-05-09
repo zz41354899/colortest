@@ -31,7 +31,7 @@ A modern web application built with Next.js, TypeScript, and Tailwind CSS that h
    ```
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## Why OKLCH and APCA?
+## Why OKLCH 
 
 ### OKLCH Color Model
 
@@ -40,9 +40,7 @@ OKLCH (Oklab Lightness-Chroma-Hue) is a perceptually uniform color space that be
 - More intuitive color adjustments
 - Better perceptual uniformity
 - Improved color harmony
-
-
-
+- 
 ## License
 
 MIT

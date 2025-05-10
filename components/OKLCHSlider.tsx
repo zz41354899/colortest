@@ -99,10 +99,10 @@ export default function OKLCHSlider({ oklchColor, onChange, label /* , isBackgro
         {/* Lightness slider */}
         <div>
           <div className="flex justify-between mb-1">
-            <label htmlFor={`l-slider-${label?.replace(/\s+/g, '-').toLowerCase() || 'oklch'}`} className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
+            <label htmlFor={`l-slider-${label?.replace(/\s+/g, '-').toLowerCase() || 'oklch'}`} className="text-sm font-medium text-zinc-600 dark:text-zinc-300">
               亮度 (L)
             </label>
-            <span className="text-sm text-zinc-500 dark:text-zinc-500">{localColor.l.toFixed(2)}</span>
+            <span className="text-sm text-zinc-500 dark:text-zinc-400">{localColor.l.toFixed(2)}</span>
           </div>
           <input
             id={`l-slider-${label?.replace(/\s+/g, '-').toLowerCase() || 'oklch'}`}
@@ -119,10 +119,10 @@ export default function OKLCHSlider({ oklchColor, onChange, label /* , isBackgro
         {/* Chroma slider */}
         <div>
           <div className="flex justify-between mb-1">
-            <label htmlFor={`c-slider-${label?.replace(/\s+/g, '-').toLowerCase() || 'oklch'}`} className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
+            <label htmlFor={`c-slider-${label?.replace(/\s+/g, '-').toLowerCase() || 'oklch'}`} className="text-sm font-medium text-zinc-600 dark:text-zinc-300">
               色度 (C)
             </label>
-            <span className="text-sm text-zinc-500 dark:text-zinc-500">{localColor.c.toFixed(3)}</span>
+            <span className="text-sm text-zinc-500 dark:text-zinc-400">{localColor.c.toFixed(3)}</span>
           </div>
           <input
             id={`c-slider-${label?.replace(/\s+/g, '-').toLowerCase() || 'oklch'}`}
@@ -139,10 +139,10 @@ export default function OKLCHSlider({ oklchColor, onChange, label /* , isBackgro
         {/* Hue slider */}
         <div>
           <div className="flex justify-between mb-1">
-            <label htmlFor={`h-slider-${label?.replace(/\s+/g, '-').toLowerCase() || 'oklch'}`} className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
+            <label htmlFor={`h-slider-${label?.replace(/\s+/g, '-').toLowerCase() || 'oklch'}`} className="text-sm font-medium text-zinc-600 dark:text-zinc-300">
               色相 (H)
             </label>
-            <span className="text-sm text-zinc-500 dark:text-zinc-500">{Math.round(localColor.h)}°</span>
+            <span className="text-sm text-zinc-500 dark:text-zinc-400">{Math.round(localColor.h)}°</span>
           </div>
           <input
             id={`h-slider-${label?.replace(/\s+/g, '-').toLowerCase() || 'oklch'}`}
@@ -159,8 +159,8 @@ export default function OKLCHSlider({ oklchColor, onChange, label /* , isBackgro
         {/* HEX & OKLCH Preview */}
         <div className="pt-2 flex items-center justify-between mt-2 border-t border-zinc-200 dark:border-zinc-800">
           <div className="flex flex-col gap-1">
-            <span className="text-xs text-zinc-500 dark:text-zinc-500">HEX: <span className="font-mono">{hexPreview}</span></span>
-            <span className="text-xs text-zinc-500 dark:text-zinc-500 font-mono">
+            <span className="text-xs text-zinc-500 dark:text-zinc-400">HEX: <span className="font-mono">{hexPreview}</span></span>
+            <span className="text-xs text-zinc-500 dark:text-zinc-400 font-mono">
               oklch({localColor.l.toFixed(2)} {localColor.c.toFixed(3)} {Math.round(localColor.h)}°)
             </span>
           </div>

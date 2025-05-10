@@ -32,15 +32,15 @@ export default function ContrastResult({ foreground, background }: ContrastResul
   const getScoreColor = (level: ReadabilityLevel): string => {
     switch (level) {
       case 'AAA':
-        return 'text-green-600 dark:text-green-500';
+        return 'text-green-600 dark:text-green-400';
       case 'AA':
-        return 'text-green-600 dark:text-green-500';
+        return 'text-green-600 dark:text-green-400';
       case 'AA Large':
-        return 'text-yellow-600 dark:text-yellow-500';
+        return 'text-yellow-600 dark:text-yellow-400';
       case 'Fail':
-        return 'text-red-600 dark:text-red-500';
+        return 'text-red-600 dark:text-red-400';
       default:
-        return 'text-red-600 dark:text-red-500';
+        return 'text-red-600 dark:text-red-400';
     }
   };
   
@@ -102,16 +102,16 @@ export default function ContrastResult({ foreground, background }: ContrastResul
         {/* Score Display */}
         <div className="flex justify-between items-center">
           <div className="flex flex-col">
-            <span className="text-xs text-zinc-600 dark:text-zinc-400">對比比率</span>
+            <span className="text-xs text-zinc-600 dark:text-zinc-300">對比比率</span>
             <span className={`text-3xl font-bold ${getScoreColor(level)}`}>
               {contrastScore.toFixed(1)}
             </span>
-            <span className="text-xs text-zinc-500 mt-1 flex items-center gap-2">
+            <span className="text-xs text-zinc-500 dark:text-zinc-400 mt-1 flex items-center gap-2">
               等級: {getLevelBadge(level)}
             </span>
           </div>
           <div className="flex flex-col items-end">
-            <span className="text-xs text-zinc-600 dark:text-zinc-400 mb-1">可讀性評估</span>
+            <span className="text-xs text-zinc-600 dark:text-zinc-300 mb-1">可讀性評估</span>
             {getReadabilityBadge()}
           </div>
         </div>
@@ -119,13 +119,13 @@ export default function ContrastResult({ foreground, background }: ContrastResul
         {/* Level and Recommendation */}
         <div className="bg-zinc-50 dark:bg-zinc-800 p-3 rounded-md">
           <div>
-            <span className="text-xs text-zinc-600 dark:text-zinc-400">建議</span>
+            <span className="text-xs text-zinc-600 dark:text-zinc-300">建議</span>
             <p className="text-sm text-zinc-700 dark:text-zinc-300">{recommendation}</p>
           </div>
         </div>
         
         {/* WCAG Information */}
-        <div className="text-xs text-zinc-500 dark:text-zinc-500 italic">
+        <div className="text-xs text-zinc-500 dark:text-zinc-400 italic">
           <p>
             WCAG 對比度評估是網頁無障礙設計的標準指標，確保視力不同的使用者都能輕鬆閱讀您的內容。
             AAA 級別 (≥7:1) 提供最佳可讀性，AA 級別 (≥4.5:1) 則符合基本需求。

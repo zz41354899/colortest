@@ -128,7 +128,7 @@ export default function ColorInputPanel({
       
       {/* HEX Input */}
       <div className="mb-3">
-        <label htmlFor={`hex-${label}`} className="block text-xs font-medium text-zinc-600 dark:text-zinc-400 mb-1">
+        <label htmlFor={`hex-${label}`} className="block text-xs font-medium text-zinc-600 dark:text-zinc-300 mb-1">
           HEX
         </label>
         <input
@@ -143,7 +143,7 @@ export default function ColorInputPanel({
       
       {/* RGB Inputs */}
       <div className="mb-3">
-        <label className="block text-xs font-medium text-zinc-600 dark:text-zinc-400 mb-1">
+        <label className="block text-xs font-medium text-zinc-600 dark:text-zinc-300 mb-1">
           RGB
         </label>
         <div className="grid grid-cols-3 gap-2">
@@ -157,7 +157,7 @@ export default function ColorInputPanel({
               className="w-full p-2 text-sm rounded-md border border-zinc-300 dark:border-zinc-700 
               bg-white dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 focus:ring-2 focus:ring-blue-500 focus:outline-none"
             />
-            <span className="text-xs text-zinc-500 dark:text-zinc-500 mt-1">R</span>
+            <span className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">R</span>
           </div>
           <div>
             <input
@@ -169,7 +169,7 @@ export default function ColorInputPanel({
               className="w-full p-2 text-sm rounded-md border border-zinc-300 dark:border-zinc-700 
               bg-white dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 focus:ring-2 focus:ring-blue-500 focus:outline-none"
             />
-            <span className="text-xs text-zinc-500 dark:text-zinc-500 mt-1">G</span>
+            <span className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">G</span>
           </div>
           <div>
             <input
@@ -181,14 +181,14 @@ export default function ColorInputPanel({
               className="w-full p-2 text-sm rounded-md border border-zinc-300 dark:border-zinc-700 
               bg-white dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 focus:ring-2 focus:ring-blue-500 focus:outline-none"
             />
-            <span className="text-xs text-zinc-500 dark:text-zinc-500 mt-1">B</span>
+            <span className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">B</span>
           </div>
         </div>
       </div>
       
       {/* OKLCH Inputs */}
       <div>
-        <label className="block text-xs font-medium text-zinc-600 dark:text-zinc-400 mb-1">
+        <label className="block text-xs font-medium text-zinc-600 dark:text-zinc-300 mb-1">
           OKLCH
         </label>
         <div className="grid grid-cols-3 gap-2">
@@ -203,7 +203,7 @@ export default function ColorInputPanel({
               className="w-full p-2 text-sm rounded-md border border-zinc-300 dark:border-zinc-700 
               bg-white dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 focus:ring-2 focus:ring-blue-500 focus:outline-none"
             />
-            <span className="text-xs text-zinc-500 dark:text-zinc-500 mt-1">L</span>
+            <span className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">L</span>
           </div>
           <div>
             <input
@@ -216,7 +216,7 @@ export default function ColorInputPanel({
               className="w-full p-2 text-sm rounded-md border border-zinc-300 dark:border-zinc-700 
               bg-white dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 focus:ring-2 focus:ring-blue-500 focus:outline-none"
             />
-            <span className="text-xs text-zinc-500 dark:text-zinc-500 mt-1">C</span>
+            <span className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">C</span>
           </div>
           <div>
             <input
@@ -228,7 +228,7 @@ export default function ColorInputPanel({
               className="w-full p-2 text-sm rounded-md border border-zinc-300 dark:border-zinc-700 
               bg-white dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 focus:ring-2 focus:ring-blue-500 focus:outline-none"
             />
-            <span className="text-xs text-zinc-500 dark:text-zinc-500 mt-1">H</span>
+            <span className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">H</span>
           </div>
         </div>
       </div>

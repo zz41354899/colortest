@@ -8,6 +8,7 @@ import ContrastResult from '@/components/ContrastResult';
 import ExportTokenPanel from '@/components/ExportTokenPanel';
 import SavedPalettes from '@/components/SavedPalettes';
 import ColorPresets from '@/components/ColorPresets';
+import ThemeToggle from '@/components/ThemeToggle';
 import { hexToOklch, oklchToHex, OKLCHColor } from '@/utils/colorUtils';
 
 type TargetColor = 'foreground' | 'background';
@@ -83,6 +84,11 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gray-50 dark:bg-zinc-950 py-8 px-4 sm:px-6 md:py-12 lg:px-8">
       <div className="max-w-7xl mx-auto">
+        {/* Theme Toggle and Header */}
+        <div className="flex justify-end mb-4">
+          <ThemeToggle />
+        </div>
+        
         {/* Page Header */}
         <div className="text-center mb-10">
           <h1 className="text-3xl font-bold text-zinc-900 dark:text-white sm:text-4xl">
@@ -122,7 +128,7 @@ export default function Home() {
                 onChange={handleActiveOklchChange} 
                 label={`${activeTarget === 'foreground' ? '前景色' : '背景色'} OKLCH 調整`} 
               />
-              <p className="text-xs text-zinc-500 dark:text-zinc-500 mt-2 text-center">
+              <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-2 text-center">
                 點擊上方色彩面板來切換調整目標（前景/背景）
               </p>
             </div>
@@ -158,7 +164,7 @@ export default function Home() {
         </div>
         
         {/* Footer */}
-        <footer className="mt-16 text-center text-sm text-zinc-500 dark:text-zinc-600">
+        <footer className="mt-16 text-center text-sm text-zinc-500 dark:text-zinc-400">
           <p>使用 Next.js、TailwindCSS 與 culori 進行色彩科學與可訪問性計算。</p>
         </footer>
       </div>

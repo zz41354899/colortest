@@ -79,7 +79,7 @@ export default function SavedPalettes({
       
       {showForm && (
         <div className="mb-4 p-3 bg-zinc-50 dark:bg-zinc-800 rounded-lg">
-          <label className="block text-xs mb-1 text-zinc-500 dark:text-zinc-400">
+          <label className="block text-xs mb-1 text-zinc-500 dark:text-zinc-300">
             組合名稱
           </label>
           <div className="flex gap-2">
@@ -88,7 +88,7 @@ export default function SavedPalettes({
               value={paletteName}
               onChange={(e) => setPaletteName(e.target.value)}
               placeholder="輸入名稱..."
-              className="flex-1 px-2 py-1 text-sm rounded border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900"
+              className="flex-1 px-2 py-1 text-sm rounded border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200"
             />
             <button
               onClick={savePalette}
@@ -129,7 +129,7 @@ export default function SavedPalettes({
                   <div className="text-sm text-zinc-700 dark:text-zinc-300 font-medium">
                     {palette.name}
                   </div>
-                  <div className="flex text-xs text-zinc-500">
+                  <div className="flex text-xs text-zinc-500 dark:text-zinc-400">
                     <span className="font-mono mr-2">{palette.foreground}</span>
                     <span className="font-mono">{palette.background}</span>
                   </div>

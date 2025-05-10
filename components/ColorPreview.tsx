@@ -14,18 +14,14 @@ export default function ColorPreview({ foreground, background }: ColorPreviewPro
   const combinedStyle = { ...foregroundStyle, ...backgroundStyle };
   
   // 只保留需要在 UI 中顯示的狀態變數
-  // const [contrastScore, setContrastScore] = useState<number>(1);
   const [readable, setReadable] = useState<boolean>(false);
-  // const [level, setLevel] = useState<string>('Fail');
 
   // Update contrast score and readability whenever foreground or background colors change
   useEffect(() => {
     const score = getWCAGContrast(foreground, background);
     const { readable } = getReadabilityLevel(score);
     
-    // setContrastScore(score);
     setReadable(readable);
-    // setLevel(level);
     
     // Log for debugging
     console.log("Preview WCAG Score:", score.toFixed(1), "fg:", foreground, "bg:", background);
@@ -35,7 +31,7 @@ export default function ColorPreview({ foreground, background }: ColorPreviewPro
     <div className="p-4 rounded-xl bg-white dark:bg-zinc-900 shadow-sm border border-zinc-200 dark:border-zinc-800">
       <div className="flex justify-between items-center mb-3">
         <h3 className="text-sm font-medium text-zinc-700 dark:text-zinc-300">預覽</h3>
-        <span className={`text-xs px-2 py-1 rounded-full ${readable ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200' : 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200'}`}>
+        <span className={`text-xs px-2.5 py-1 rounded-full font-medium ${readable ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200' : 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200'}`}>
           {readable ? '可讀性佳' : '可讀性有限'}
         </span>
       </div>
@@ -43,10 +39,10 @@ export default function ColorPreview({ foreground, background }: ColorPreviewPro
       <div className="space-y-6">
         {/* 文字大小與權重預覽 */}
         <div className="space-y-2">
-          <h4 className="text-xs font-medium text-zinc-600 dark:text-zinc-400">文字樣式</h4>
+          <h4 className="text-xs font-medium text-zinc-600 dark:text-zinc-300">文字樣式</h4>
           <div 
             style={backgroundStyle} 
-            className="p-4 rounded-md"
+            className="p-4 rounded-md overflow-hidden"
           >
             <div style={foregroundStyle} className="text-3xl font-bold mb-1">大標題</div>
             <div style={foregroundStyle} className="text-2xl font-semibold mb-1">次標題</div>
@@ -59,10 +55,10 @@ export default function ColorPreview({ foreground, background }: ColorPreviewPro
         
         {/* Button Preview */}
         <div className="space-y-2">
-          <h4 className="text-xs font-medium text-zinc-600 dark:text-zinc-400">按鈕與互動元素</h4>
+          <h4 className="text-xs font-medium text-zinc-600 dark:text-zinc-300">按鈕與互動元素</h4>
           <div 
             style={backgroundStyle}
-            className="p-4 rounded-md flex flex-wrap gap-3"
+            className="p-4 rounded-md flex flex-wrap gap-3 overflow-hidden"
           >
             <button 
               style={combinedStyle}
@@ -87,10 +83,10 @@ export default function ColorPreview({ foreground, background }: ColorPreviewPro
         
         {/* Text Block Preview */}
         <div className="space-y-2">
-          <h4 className="text-xs font-medium text-zinc-600 dark:text-zinc-400">文字區塊</h4>
+          <h4 className="text-xs font-medium text-zinc-600 dark:text-zinc-300">文字區塊</h4>
           <div 
             style={backgroundStyle} 
-            className="p-4 rounded-md"
+            className="p-4 rounded-md overflow-hidden"
           >
             <h3 style={foregroundStyle} className="text-lg font-bold mb-2">
               無障礙設計的重要性
@@ -106,10 +102,10 @@ export default function ColorPreview({ foreground, background }: ColorPreviewPro
         
         {/* Card UI Preview */}
         <div className="space-y-2">
-          <h4 className="text-xs font-medium text-zinc-600 dark:text-zinc-400">卡片元件</h4>
+          <h4 className="text-xs font-medium text-zinc-600 dark:text-zinc-300">卡片元件</h4>
           <div 
             style={backgroundStyle}
-            className="rounded-lg p-4 shadow-md"
+            className="rounded-lg p-4 shadow-md overflow-hidden"
           >
             <div className="flex items-center gap-3 mb-3">
               <div style={foregroundStyle} className="w-10 h-10 rounded-full flex items-center justify-center border-2 border-current">
@@ -144,10 +140,10 @@ export default function ColorPreview({ foreground, background }: ColorPreviewPro
         
         {/* 表單元素預覽 */}
         <div className="space-y-2">
-          <h4 className="text-xs font-medium text-zinc-600 dark:text-zinc-400">表單元素</h4>
+          <h4 className="text-xs font-medium text-zinc-600 dark:text-zinc-300">表單元素</h4>
           <div 
             style={backgroundStyle}
-            className="rounded-lg p-4"
+            className="rounded-lg p-4 overflow-hidden"
           >
             <div className="mb-3">
               <label style={foregroundStyle} className="block text-sm font-medium mb-1">輸入標籤</label>
@@ -172,9 +168,9 @@ export default function ColorPreview({ foreground, background }: ColorPreviewPro
                 style={{ ...backgroundStyle, borderColor: foreground, color: foreground }}
                 className="w-full px-3 py-2 rounded border text-sm"
               >
-                <option>選項 1</option>
-                <option>選項 2</option>
-                <option>選項 3</option>
+                <option style={{ ...backgroundStyle, color: foreground }}>選項 1</option>
+                <option style={{ ...backgroundStyle, color: foreground }}>選項 2</option>
+                <option style={{ ...backgroundStyle, color: foreground }}>選項 3</option>
               </select>
             </div>
           </div>

@@ -55,7 +55,7 @@ export default function ExportTokenPanel({ foreground, background }: ExportToken
       
       <div className="space-y-4">
         <div className="bg-zinc-50 dark:bg-zinc-800 p-3 rounded-md font-mono text-xs">
-          <pre className="overflow-x-auto">{generateTokens()}</pre>
+          <pre className="overflow-x-auto text-zinc-800 dark:text-zinc-300">{generateTokens()}</pre>
         </div>
         
         <div className="flex justify-end">
